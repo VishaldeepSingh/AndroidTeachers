@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.delaroystudios.teacherassistant">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".AppBase"
+            android:name=".EmailPasswordActivity"
             android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -20,6 +22,8 @@
         <activity
             android:name=".profile_activity"
             android:parentActivityName=".AppBase" />
+        <activity android:name=".AppBase" />
+        <activity android:name=".BaseActivity" />
         <activity
             android:name=".Student_Registartion"
             android:parentActivityName=".profile_activity" />
@@ -51,8 +55,9 @@
         <activity
             android:name=".About"
             android:parentActivityName=".AppBase" />
-        <activity android:name=".Edit_Student"
-            android:parentActivityName=".AppBase"/>
+        <activity
+            android:name=".Edit_Student"
+            android:parentActivityName=".AppBase" />
     </application>
 
 </manifest>

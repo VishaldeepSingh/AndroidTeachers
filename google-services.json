@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "921092690475",
+    "firebase_url": "https://androidteacher-91461.firebaseio.com",
+    "project_id": "androidteacher-91461",
+    "storage_bucket": "androidteacher-91461.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:921092690475:android:eb0a8f1cd9bfb4a1",
+        "android_client_info": {
+          "package_name": "com.delaroystudios.teacherassistant"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "921092690475-iosvgu14f0gqgn1mn7948o0o6tb52deq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK2iBKXebFCq31dk-LcnXAFlXDcwnOlAU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
