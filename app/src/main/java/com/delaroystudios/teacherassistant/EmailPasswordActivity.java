@@ -31,6 +31,7 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class EmailPasswordActivity extends BaseActivity implements
         View.OnClickListener {
@@ -44,6 +45,7 @@ public class EmailPasswordActivity extends BaseActivity implements
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
+    UserProfileChangeRequest userProfileChangeRequest;
     // [END declare_auth]
 
     @Override
@@ -66,6 +68,7 @@ public class EmailPasswordActivity extends BaseActivity implements
         // [START initialize_auth]
         mAuth = FirebaseAuth.getInstance();
         // [END initialize_auth]
+
     }
 
     // [START on_start_check_user]

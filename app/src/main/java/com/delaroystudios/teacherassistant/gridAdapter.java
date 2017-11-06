@@ -32,8 +32,9 @@ import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.delaroystudios.teacherassistant.Chat.Login;
+
 import java.util.ArrayList;
-import java.util.StringTokenizer;
 
 
 public class gridAdapter extends BaseAdapter{
@@ -160,6 +161,27 @@ public class gridAdapter extends BaseAdapter{
                 @Override
                 public void onClick(View v) {
                     Intent launchinIntent = new Intent(activity, cgpa_activity.class);
+                    activity.startActivity(launchinIntent);
+                }
+            });
+            Animation anim = new ScaleAnimation(
+                    0.95f, 1f, // Start and end values for the X axis scaling
+                    0.95f, 1f, // Start and end values for the Y axis scaling
+                    Animation.RELATIVE_TO_SELF, 0.5f, // Pivot point of X scaling
+                    Animation.RELATIVE_TO_SELF, 0.5f); // Pivot point of Y scaling
+            anim.setFillAfter(true); // Needed to keep the result of the animation
+            anim.setDuration(2000);
+            anim.setRepeatMode(Animation.INFINITE);
+            anim.setRepeatCount(Animation.INFINITE);
+            imageView.startAnimation(anim);
+        }
+        else if(names.get(position).toString().equals("CHAT"))
+        {
+            imageView.setImageResource(R.drawable.ic_chat);
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent launchinIntent = new Intent(activity, Login.class);
                     activity.startActivity(launchinIntent);
                 }
             });
