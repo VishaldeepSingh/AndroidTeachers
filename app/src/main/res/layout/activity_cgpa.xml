@@ -20,7 +20,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="10dp"
         android:layout_marginTop="14dp"
-        android:text="   ENTER YOUR SGPA  "
+        android:text="   ENTER YOUR CGPA  "
         android:textColor="#000000"
         android:textSize="20sp"/>
 
@@ -29,7 +29,7 @@
         android:id="@+id/c4"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:hint="S5"
+        android:hint="S4"
         android:ems="10"
         android:inputType="numberDecimal"
         android:layout_below="@+id/c3"
@@ -42,7 +42,7 @@
         android:id="@+id/c5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="S6"
+        android:hint="S5"
         android:ems="10"
         android:inputType="numberDecimal"
         android:layout_below="@+id/c4"
@@ -55,7 +55,7 @@
         android:id="@+id/c7"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:hint="S8"
+        android:hint="S7"
         android:ems="10"
         android:inputType="numberDecimal"
         android:layout_below="@+id/c6"
@@ -65,10 +65,24 @@
         android:layout_alignEnd="@+id/c6" />
 
     <EditText
+        android:id="@+id/c8"
+        android:layout_width="70dp"
+        android:layout_height="wrap_content"
+        android:hint="S8"
+        android:ems="10"
+        android:inputType="numberDecimal"
+        android:layout_below="@+id/c7"
+        android:layout_alignLeft="@+id/c7"
+        android:layout_alignStart="@+id/c7"
+        android:layout_alignRight="@+id/c7"
+        android:layout_alignEnd="@+id/c7">
+    </EditText>
+
+    <EditText
         android:id="@+id/c6"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:hint="S7"
+        android:hint="S6"
         android:ems="10"
         android:inputType="numberDecimal"
         android:layout_below="@+id/c5"
@@ -81,7 +95,7 @@
         android:id="@+id/c2"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:hint="S3"
+        android:hint="S2"
         android:ems="10"
         android:inputType="numberDecimal"
         android:layout_below="@+id/c1"
@@ -94,7 +108,7 @@
         android:id="@+id/c1"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:hint="S1S2"
+        android:hint="S1"
         android:ems="10"
         android:inputType="numberDecimal"
         android:layout_below="@+id/textView2"
@@ -110,7 +124,7 @@
         android:id="@+id/c3"
         android:layout_width="70dp"
         android:layout_height="wrap_content"
-        android:hint="S4"
+        android:hint="S3"
         android:ems="10"
         android:inputType="numberDecimal"
         android:layout_below="@+id/c2"
@@ -129,7 +143,7 @@
         android:textSize="16dp"
         android:background="@color/colorPrimaryDark"
         android:textColor="#ffffff"
-        android:layout_below="@+id/c7"
+        android:layout_below="@+id/c8"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="30dp" />
 

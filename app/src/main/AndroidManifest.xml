@@ -29,6 +29,10 @@
         <activity android:name=".Chat.Register" />
         <activity android:name=".Chat.Users" />
         <activity android:name=".Chat.UserDetails" />
+        <activity android:name=".AppBase1"/>
+        <activity android:name=".scheduler1"/>
+        <activity android:name=".noteActivity1"/>
+        <activity android:name=".profile_activity1"/>
         <activity
             android:name=".Student_Registartion"
             android:parentActivityName=".profile_activity" />

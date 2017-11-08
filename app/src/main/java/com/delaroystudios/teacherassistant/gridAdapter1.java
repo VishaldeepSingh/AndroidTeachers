@@ -37,11 +37,11 @@ import com.delaroystudios.teacherassistant.Chat.Login;
 import java.util.ArrayList;
 
 
-public class gridAdapter extends BaseAdapter{
+public class gridAdapter1 extends BaseAdapter{
     ArrayList names;
     public static Activity activity;
 
-    public gridAdapter(Activity activity, ArrayList names) {
+    public gridAdapter1(Activity activity, ArrayList names) {
         this.activity = activity;
         this.names = names;
     }
@@ -75,7 +75,7 @@ public class gridAdapter extends BaseAdapter{
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent launchinIntent = new Intent(activity, scheduler.class);
+                    Intent launchinIntent = new Intent(activity, scheduler1.class);
                     activity.startActivity(launchinIntent);
                 }
             });
@@ -96,7 +96,7 @@ public class gridAdapter extends BaseAdapter{
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent launchinIntent = new Intent(activity, noteActivity.class);
+                    Intent launchinIntent = new Intent(activity, noteActivity1.class);
                     activity.startActivity(launchinIntent);
                 }
             });
@@ -117,7 +117,7 @@ public class gridAdapter extends BaseAdapter{
             v.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent launchinIntent = new Intent(activity, profile_activity.class);
+                    Intent launchinIntent = new Intent(activity, profile_activity1.class);
                     activity.startActivity(launchinIntent);
                 }
             });

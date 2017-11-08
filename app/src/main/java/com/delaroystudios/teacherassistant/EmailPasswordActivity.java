@@ -24,6 +24,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -45,10 +46,10 @@ public class EmailPasswordActivity extends BaseActivity implements
     private EditText mPasswordField;
     private RadioButton rbTeacher;
     private RadioButton rbStudent;
+    private RadioGroup radioGroup;
 
     // [START declare_auth]
     private FirebaseAuth mAuth;
-    UserProfileChangeRequest userProfileChangeRequest;
     // [END declare_auth]
 
     @Override
@@ -69,6 +70,7 @@ public class EmailPasswordActivity extends BaseActivity implements
         findViewById(R.id.verify_email_button).setOnClickListener(this);
         rbTeacher = (RadioButton) findViewById(R.id.rbTeacher);
         rbStudent = (RadioButton) findViewById(R.id.rbStudent);
+        radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 
         // [START initialize_auth]
         mAuth = FirebaseAuth.getInstance();
@@ -150,6 +152,16 @@ public class EmailPasswordActivity extends BaseActivity implements
                             Log.d(TAG, "signInWithEmail:success");
                             FirebaseUser user = mAuth.getCurrentUser();
                             updateUI(user);
+                            int id = radioGroup.getCheckedRadioButtonId();
+
+                            if(id == R.id.rbTeacher){
+                                Intent intent = new Intent(getApplicationContext(),AppBase.class);
+                                startActivity(intent);
+                            }
+                            else if (id == R.id.rbStudent){
+                                Intent intent = new Intent(getApplicationContext(),AppBase1.class);
+                                startActivity(intent);
+                            }
                         /*    if(rbTeacher.isSelected())
                             {
                                 Intent intent = new Intent(getApplicationContext(),AppBase.class);
@@ -161,8 +173,8 @@ public class EmailPasswordActivity extends BaseActivity implements
                                 startActivity(intent);
                             } */
 
-                            Intent intent = new Intent(getApplicationContext(),AppBase.class);
-                            startActivity(intent);
+                            //Intent intent = new Intent(getApplicationContext(),AppBase.class);
+                            //startActivity(intent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithEmail:failure", task.getException());
