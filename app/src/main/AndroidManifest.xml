@@ -24,11 +24,11 @@
             android:parentActivityName=".AppBase" />
         <activity android:name=".AppBase" />
         <activity android:name=".BaseActivity" />
-        <activity android:name=".Chat.Chat"/>
-        <activity android:name=".Chat.Login"/>
-        <activity android:name=".Chat.Register"/>
-        <activity android:name=".Chat.Users"/>
-        <activity android:name=".Chat.UserDetails"/>
+        <activity android:name=".Chat.Chat" />
+        <activity android:name=".Chat.Login" />
+        <activity android:name=".Chat.Register" />
+        <activity android:name=".Chat.Users" />
+        <activity android:name=".Chat.UserDetails" />
         <activity
             android:name=".Student_Registartion"
             android:parentActivityName=".profile_activity" />
@@ -63,6 +63,7 @@
         <activity
             android:name=".Edit_Student"
             android:parentActivityName=".AppBase" />
+        <activity android:name=".AppBase1"></activity>
     </application>
 
 </manifest>
