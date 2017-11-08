@@ -69,7 +69,29 @@ public class gridAdapter extends BaseAdapter{
         }
         TextView textView = (TextView)v.findViewById(R.id.namePlacer);
         ImageView imageView = (ImageView)v.findViewById(R.id.imageHolder);
-        if(names.get(position).toString().equals("SCHEDULER"))
+        if(names.get(position).toString().equals("ATTENDANCE"))
+        {
+            imageView.setImageResource(R.drawable.ic_attendance);
+            v.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    FragmentManager fm = activity.getFragmentManager();
+                    createRequest request = new createRequest();
+                    request.show(fm,"Select");
+                }
+            });
+            Animation anim = new ScaleAnimation(
+                    0.95f, 1f, // Start and end values for the X axis scaling
+                    0.95f, 1f, // Start and end values for the Y axis scaling
+                    Animation.RELATIVE_TO_SELF, 0.5f, // Pivot point of X scaling
+                    Animation.RELATIVE_TO_SELF, 0.5f); // Pivot point of Y scaling
+            anim.setFillAfter(true); // Needed to keep the result of the animation
+            anim.setDuration(2000);
+            anim.setRepeatMode(Animation.INFINITE);
+            anim.setRepeatCount(Animation.INFINITE);
+            imageView.startAnimation(anim);
+
+        }else if(names.get(position).toString().equals("SCHEDULER"))
         {
             imageView.setImageResource(R.drawable.ic_schedule);
             v.setOnClickListener(new View.OnClickListener() {

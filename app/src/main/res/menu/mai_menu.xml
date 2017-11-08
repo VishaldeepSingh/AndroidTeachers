@@ -8,10 +8,4 @@
         android:title="Settings"
         android:onClick="loadSettings"
         app:showAsAction="never" />
-    <item
-        android:id="@+id/about"
-        android:orderInCategory="100"
-        android:title="About"
-        android:onClick="loadAbout"
-        app:showAsAction="never" />
 </menu>

@@ -69,8 +69,4 @@ public class AppBase extends AppCompatActivity {
         startActivity(launchIntent);
     }
 
-    public void loadAbout(MenuItem item) {
-        Intent launchIntent = new Intent(this,About.class);
-        startActivity(launchIntent);
-    }
 }

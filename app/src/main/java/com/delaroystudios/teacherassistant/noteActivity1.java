@@ -20,7 +20,7 @@ import android.widget.Toast;
 
 import java.util.ArrayList;
 
-public class noteActivity1 extends AppCompatActivity implements ListView.OnItemClickListener,ListView.OnItemLongClickListener{
+public class noteActivity1 extends AppCompatActivity implements ListView.OnItemClickListener{
 
     ListView listView;
     ArrayAdapter adapter;
@@ -48,7 +48,7 @@ public class noteActivity1 extends AppCompatActivity implements ListView.OnItemC
         listView = (ListView)findViewById(R.id.noteList);
         loadNotes();
         listView.setOnItemClickListener(this);
-        listView.setOnItemLongClickListener(this);
+     //   listView.setOnItemLongClickListener(this);
     }
 
     private void loadNotes() {
@@ -89,7 +89,7 @@ public class noteActivity1 extends AppCompatActivity implements ListView.OnItemC
         alert.show();
     }
 
-    @Override
+ /*   @Override
     public boolean onItemLongClick(AdapterView<?> parent, View view, int position, long id) {
         AlertDialog.Builder alert = new AlertDialog.Builder(activity);
         final String title = titles.get(position).toString();
@@ -100,7 +100,7 @@ public class noteActivity1 extends AppCompatActivity implements ListView.OnItemC
             @Override
             public void onClick(DialogInterface dialog, int which) {
                 String qu = "DELETE FROM NOTES WHERE TITLE = '" + title + "' AND body = '" + body + "'";
-                if (AppBase1.handler.execAction(qu)) {
+                if (AppBase.handler.execAction(qu)) {
                     loadNotes();
                     Toast.makeText(getBaseContext(), "Deleted", Toast.LENGTH_LONG).show();
                 } else {
@@ -114,7 +114,7 @@ public class noteActivity1 extends AppCompatActivity implements ListView.OnItemC
         alert.show();
         return true;
     }
-
+*/
 
     public void refreshNote(MenuItem item) {
         loadNotes();
